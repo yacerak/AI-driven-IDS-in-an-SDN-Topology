@@ -1,0 +1,195 @@
+yacer_ak@yacer-ubuntu:~$ source myenv-9/bin/activate
+(myenv-9) yacer_ak@yacer-ubuntu:~$ cd projects/sdn/
+(myenv-9) yacer_ak@yacer-ubuntu:~/projects/sdn$ ryu-manager --verbose  LstmIDS.py 
+loading app LstmIDS.py
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+Creating converter from 7 to 5
+Creating converter from 5 to 7
+loading app ryu.controller.ofp_handler
+instantiating app LstmIDS.py of IDSController
+instantiating app ryu.controller.ofp_handler of OFPHandler
+BRICK IDSController
+  CONSUMES EventOFPPacketIn
+  CONSUMES EventOFPSwitchFeatures
+BRICK ofp_event
+  PROVIDES EventOFPPacketIn TO {'IDSController': {'main'}}
+  PROVIDES EventOFPSwitchFeatures TO {'IDSController': {'config'}}
+  CONSUMES EventOFPEchoReply
+  CONSUMES EventOFPEchoRequest
+  CONSUMES EventOFPErrorMsg
+  CONSUMES EventOFPHello
+  CONSUMES EventOFPPortDescStatsReply
+  CONSUMES EventOFPPortStatus
+  CONSUMES EventOFPSwitchFeatures
+connected socket:<eventlet.greenio.base.GreenSocket object at 0x7d196442d760> address:('127.0.0.1', 33688)
+hello ev <ryu.controller.ofp_event.EventOFPHello object at 0x7d196442de80>
+move onto config mode
+EVENT ofp_event->IDSController EventOFPSwitchFeatures
+switch features ev version=0x4,msg_type=0x6,msg_len=0x20,xid=0xe43cf35,OFPSwitchFeatures(auxiliary_id=0,capabilities=79,datapath_id=1,n_buffers=0,n_tables=254)
+switch_features_handler
+add_flow
+add_flow
+move onto main mode
+connected socket:<eventlet.greenio.base.GreenSocket object at 0x7d196442d8e0> address:('127.0.0.1', 53588)
+EVENT ofp_event->IDSController EventOFPPacketIn
+add_flow
+EVENT ofp_event->IDSController EventOFPPacketIn
+add_flow
+EVENT ofp_event->IDSController EventOFPPacketIn
+add_flow
+EVENT ofp_event->IDSController EventOFPPacketIn
+add_flow
+EVENT ofp_event->IDSController EventOFPPacketIn
+add_flow
+EVENT ofp_event->IDSController EventOFPPacketIn
+add_flow
+EVENT ofp_event->IDSController EventOFPPacketIn
+add_flow
+EVENT ofp_event->IDSController EventOFPPacketIn
+EVENT ofp_event->IDSController EventOFPPacketIn
+EVENT ofp_event->IDSController EventOFPPacketIn
+add_flow
+add_flow
+add_flow
+EVENT ofp_event->IDSController EventOFPPacketIn
+add_flow
+EVENT ofp_event->IDSController EventOFPPacketIn
+add_flow
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.1 -> 8e:f7:b6:49:af:68
+add_flow
+No MAC found for IP 10.0.0.2, cannot reply
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+EVENT ofp_event->IDSController EventOFPPacketIn
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.1 -> 8e:f7:b6:49:af:68
+add_flow
+Packet handling failed: 'OFPPacketIn' object has no attribute 'in_port'
+Traceback (most recent call last):
+  File "/home/yacer_ak/projects/sdn/LstmIDS.py", line 128, in _packet_in_handler
+    self.handle_arp(datapath, msg, pkt)
+  File "/home/yacer_ak/projects/sdn/LstmIDS.py", line 283, in handle_arp
+    self.send_arp_reply(datapath, arp_pkt, msg)
+  File "/home/yacer_ak/projects/sdn/LstmIDS.py", line 321, in send_arp_reply
+    actions = [datapath.ofproto_parser.OFPActionOutput(msg.in_port)]
+AttributeError: 'OFPPacketIn' object has no attribute 'in_port'
+Learned 10.0.0.1 -> 8e:f7:b6:49:af:68
+add_flow
+No MAC found for IP 10.0.0.3, cannot reply
+Learned 10.0.0.1 -> 8e:f7:b6:49:af:68
+add_flow
+No MAC found for IP 10.0.0.6, cannot reply
+EVENT ofp_event->IDSController EventOFPPacketIn
+EVENT ofp_event->IDSController EventOFPPacketIn
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+Learned 10.0.0.3 -> f2:80:dd:9a:28:45
+Learned 10.0.0.6 -> 12:11:cb:33:39:ea
+EVENT ofp_event->IDSController EventOFPPacketIn
+EVENT ofp_event->IDSController EventOFPPacketIn
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+Learned 10.0.0.3 -> f2:80:dd:9a:28:45
+Learned 10.0.0.6 -> 12:11:cb:33:39:ea
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.1 -> 8e:f7:b6:49:af:68
+add_flow
+Packet handling failed: 'OFPPacketIn' object has no attribute 'in_port'
+Traceback (most recent call last):
+  File "/home/yacer_ak/projects/sdn/LstmIDS.py", line 128, in _packet_in_handler
+    self.handle_arp(datapath, msg, pkt)
+  File "/home/yacer_ak/projects/sdn/LstmIDS.py", line 283, in handle_arp
+    self.send_arp_reply(datapath, arp_pkt, msg)
+  File "/home/yacer_ak/projects/sdn/LstmIDS.py", line 321, in send_arp_reply
+    actions = [datapath.ofproto_parser.OFPActionOutput(msg.in_port)]
+AttributeError: 'OFPPacketIn' object has no attribute 'in_port'
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+EVENT ofp_event->IDSController EventOFPPacketIn
+Learned 10.0.0.2 -> 56:2b:1b:ef:51:41
+
+
+
+yacer_ak@yacer-ubuntu:~$ source myenv-9/bin/activate
+(myenv-9) yacer_ak@yacer-ubuntu:~$ sudo mn --topo single,10 --switch ovsk --controller remote
+[sudo] password for yacer_ak: 
+*** Creating network
+*** Adding controller
+Connecting to remote controller at 127.0.0.1:6653
+*** Adding hosts:
+h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 
+*** Adding switches:
+s1 
+*** Adding links:
+(h1, s1) (h2, s1) (h3, s1) (h4, s1) (h5, s1) (h6, s1) (h7, s1) (h8, s1) (h9, s1) (h10, s1) 
+*** Configuring hosts
+h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 
+*** Starting controller
+c0 
+*** Starting 1 switches
+s1 ...
+*** Starting CLI:
+mininet> h1 ping h2
+PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data.
+From 10.0.0.1 icmp_seq=1 Destination Host Unreachable
+From 10.0.0.1 icmp_seq=2 Destination Host Unreachable
+From 10.0.0.1 icmp_seq=3 Destination Host Unreachable
+^C
+--- 10.0.0.2 ping statistics ---
+5 packets transmitted, 0 received, +3 errors, 100% packet loss, time 4083ms
+pipe 4
+mininet> h1 nmap -sS 10.0.0.2 10.0.0.3 10.0.0.6
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-05-26 16:08 CET
+Nmap done: 3 IP addresses (0 hosts up) scanned in 1.58 seconds
+mininet> h1 hping3 -S --flood -p 80 10.0.0.2
+HPING 10.0.0.2 (h1-eth0 10.0.0.2): S set, 40 headers + 0 data bytes
+hping in flood mode, no replies will be shown
+^C
+--- 10.0.0.2 hping statistic ---
+1559832 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+mininet> exit
+*** Stopping 1 controllers
+c0 
+*** Stopping 10 links
+..........
+*** Stopping 1 switches
+s1 
+*** Stopping 10 hosts
+h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 
+*** Done
+completed in 120.077 seconds
+
