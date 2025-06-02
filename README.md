@@ -6,6 +6,9 @@
 
 This project implements a flexible and extensible Intrusion Detection System (IDS) built upon the Software-Defined Networking (SDN) paradigm using the Ryu OpenFlow controller framework. It leverages various machine learning models to analyze network traffic in real-time, identify potential threats based on the NSL-KDD feature set, and proactively block malicious traffic flows within the network. The system is designed to work with OpenFlow-enabled switches and includes components for traffic simulation, feature extraction, and multiple ML-based detection engines.
 
+## the models and codes:
+https://www.kaggle.com/yacermeftah/code
+
 ## Features
 
 *   **SDN-based Control**: Utilizes the Ryu OpenFlow controller for centralized network visibility and control.
